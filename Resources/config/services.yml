@@ -1,0 +1,10 @@
+parameters:
+    edgar_ez_cdn.cdn_listener_class: EdgarEz\CDNBundle\EventListener\CDNListener
+
+services:
+    edgar_ez_cdn.cdn_listener:
+        class: %edgar_ez_cdn.cdn_listener_class%
+        calls:
+            - [setContainer, [@service_container]]
+        tags:
+            - { name: kernel.event_subscriber }

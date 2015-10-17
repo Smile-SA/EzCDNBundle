@@ -1,0 +1,19 @@
+{
+  "name": "edgarez/cdnbundle",
+  "description": "CDN Bundle",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Emmanuel Drouet",
+      "homepage": "http://emmanuel-drouet.me"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-0": {"EdgarEz\\CDNBundle": ""}
+  },
+  "target-dir": "EdgarEz/CDNBundle"
+}
