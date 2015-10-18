@@ -38,5 +38,5 @@ public function registerBundles()
 edgar_ez_cdn:
     system:
         acme_group: #for each siteaccess
-            domain: example.cloudfront.comain #required, delare your CDN domain
+            domain: domain.tld #required, delare your CDN domain
             extensions: [png, css] # list of resource extension that would be serve by your CDN
