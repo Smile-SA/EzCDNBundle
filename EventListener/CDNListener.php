@@ -49,6 +49,7 @@ class CDNListener extends ContainerAware implements EventSubscriberInterface
         $configResolver = $this->container->get('ezpublish.config.resolver');
         $domain         = $configResolver->getParameter('domain', 'edgar_ez_cdn');
         $extensions     = $configResolver->getParameter('extensions', 'edgar_ez_cdn');
+        $http           = $request->isSecure() ? 'https' : 'http';
 
         if (empty($extensions))
             return;
@@ -63,8 +64,8 @@ class CDNListener extends ContainerAware implements EventSubscriberInterface
         $extensions = implode('|', $extensions);
 
         $content = $response->getContent();
-        $pattern = '/="\/(css|js|var|bundles)\/(.*)\.(' . $extensions . ')([^"]*)"/i';
-        $replace = '="http://' . $domain . '/${1}/${2}.${3}${4}"';
+        $pattern = '/="[^"]*\/(css|js|var|bundles)\/(.*)\.(' . $extensions . ')([^"]*)"/i';
+        $replace = '="' . $http . '://' . $domain . '/${1}/${2}.${3}${4}"';
 
         $content = preg_replace($pattern, $replace, $content);
 

@@ -31,7 +31,9 @@ public function registerBundles()
 }
 ```
 
-Care about Apache configuration when fonts (eot, woff ...) served by css, or ajax or cookie manipulation with javascript.
+Care about Apache configuration when fonts (eot, woff ...) served by css, or ajax/cookie manipulation with javascript.
+Refer to : http://www.w3.org/TR/cors/
+
 
 ### Configure bundle
 
