@@ -31,6 +31,8 @@ public function registerBundles()
 }
 ```
 
+Care about Apache configuration when fonts (eot, woff ...) served by css, or ajax or cookie manipulation with javascript.
+
 ### Configure bundle
 
 ```yaml
@@ -40,3 +42,5 @@ edgar_ez_cdn:
         acme_group: #for each siteaccess
             domain: domain.tld #required, delare your CDN domain
             extensions: [png, css] # list of resource extension that would be serve by your CDN
+```
+

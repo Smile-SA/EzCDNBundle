@@ -63,7 +63,7 @@ class CDNListener extends ContainerAware implements EventSubscriberInterface
         $extensions = implode('|', $extensions);
 
         $content = $response->getContent();
-        $pattern = '/="\/(bundles)\/(.*)\.(' . $extensions . ')([^"]*)"/i';
+        $pattern = '/="\/(var|bundles)\/(.*)\.(' . $extensions . ')([^"]*)"/i';
         $replace = '="http://' . $domain . '/${1}/${2}.${3}${4}"';
 
         $content = preg_replace($pattern, $replace, $content);
