@@ -2,13 +2,32 @@
 
 namespace EdgarEz\CDNBundle\EventListener;
 
-use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-class CDNListener extends ContainerAware implements EventSubscriberInterface
+class CDNListener implements EventSubscriberInterface
 {
+    /**
+     * @var string
+     */
+    private $domain;
+
+    /**
+     * @var string
+     */
+    private $extensions;
+
+    public function setDomain($domain)
+    {
+        $this->domain = $domain;
+    }
+
+    public function setExtensions(array $extensions)
+    {
+        $this->extensions = $extensions;
+    }
+
     /**
      * Link Event with RESPONSE Kernel Event Dispatcher
      *
@@ -46,26 +65,19 @@ class CDNListener extends ContainerAware implements EventSubscriberInterface
             return;
         }
 
-        $configResolver = $this->container->get('ezpublish.config.resolver');
-        $domain         = $configResolver->getParameter('domain', 'edgar_ez_cdn');
-        $extensions     = $configResolver->getParameter('extensions', 'edgar_ez_cdn');
-        $http           = $request->isSecure() ? 'https' : 'http';
+        $http = $request->isSecure() ? 'https' : 'http';
 
-        if (empty($extensions))
+        if (empty($this->extensions))
             return;
 
-        if (!is_array($extensions)) {
-            $extensions = array($extensions);
-        }
-
-        if (count($extensions) == 0)
+        if (count($this->extensions) == 0)
             return;
 
-        $extensions = implode('|', $extensions);
+        $extensions = implode('|', $this->extensions);
 
         $content = $response->getContent();
-        $pattern = '/="[^"]*\/(css|js|var|bundles)\/(.*)\.(' . $extensions . ')([^"]*)"/i';
-        $replace = '="' . $http . '://' . $domain . '/${1}/${2}.${3}${4}"';
+        $pattern = '/="[^"]*\/(css|js|var|bundles)\/(.*)\.(' . $this->extensions . ')([^"]*)"/i';
+        $replace = '="' . $http . '://' . $this->domain . '/${1}/${2}.${3}${4}"';
 
         $content = preg_replace($pattern, $replace, $content);
 
