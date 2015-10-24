@@ -76,7 +76,7 @@ class CDNListener implements EventSubscriberInterface
         $extensions = implode('|', $this->extensions);
 
         $content = $response->getContent();
-        $pattern = '/="[^"]*\/(css|js|var|bundles)\/(.*)\.(' . $this->extensions . ')([^"]*)"/i';
+        $pattern = '/="[^"]*\/(css|js|var|bundles)\/(.*)\.(' . $extensions . ')([^"]*)"/i';
         $replace = '="' . $http . '://' . $this->domain . '/${1}/${2}.${3}${4}"';
 
         $content = preg_replace($pattern, $replace, $content);
