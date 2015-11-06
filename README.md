@@ -1,5 +1,11 @@
 # EdgarEzCDNBundle
 
+[![Latest Stable Version](https://poser.pugx.org/edgarez/cdnbundle/v/stable)](https://packagist.org/packages/edgarez/cdnbundle) 
+[![Total Downloads](https://poser.pugx.org/edgarez/cdnbundle/downloads)](https://packagist.org/packages/edgarez/cdnbundle)
+[![Daily Downloads](https://poser.pugx.org/edgarez/cdnbundle/d/daily)](https://packagist.org/packages/edgarez/cdnbundle)
+[![Latest Unstable Version](https://poser.pugx.org/edgarez/cdnbundle/v/unstable)](https://packagist.org/packages/edgarez/cdnbundle) 
+[![License](https://poser.pugx.org/edgarez/cdnbundle/license)](https://packagist.org/packages/edgarez/cdnbundle)
+
 This bundle aims to replace or add CDN domain to specific resource provided by web page
 
 
