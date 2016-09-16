@@ -1,10 +1,6 @@
 # SmileEzCDNBundle
 
-[![Latest Stable Version](https://poser.pugx.org/edgarez/cdnbundle/v/stable)](https://packagist.org/packages/edgarez/cdnbundle) 
-[![Total Downloads](https://poser.pugx.org/edgarez/cdnbundle/downloads)](https://packagist.org/packages/edgarez/cdnbundle)
-[![Daily Downloads](https://poser.pugx.org/edgarez/cdnbundle/d/daily)](https://packagist.org/packages/edgarez/cdnbundle)
-[![Latest Unstable Version](https://poser.pugx.org/edgarez/cdnbundle/v/unstable)](https://packagist.org/packages/edgarez/cdnbundle) 
-[![License](https://poser.pugx.org/edgarez/cdnbundle/license)](https://packagist.org/packages/edgarez/cdnbundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/deca2593-f005-4866-9aec-a2ba30d681b1/mini.png)](https://insight.sensiolabs.com/projects/deca2593-f005-4866-9aec-a2ba30d681b1)
 
 This bundle aims to replace or add CDN domain to specific resource provided by web page
 
