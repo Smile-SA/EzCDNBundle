@@ -1,4 +1,4 @@
-# EdgarEzCDNBundle
+# SmileEzCDNBundle
 
 [![Latest Stable Version](https://poser.pugx.org/edgarez/cdnbundle/v/stable)](https://packagist.org/packages/edgarez/cdnbundle) 
 [![Total Downloads](https://poser.pugx.org/edgarez/cdnbundle/downloads)](https://packagist.org/packages/edgarez/cdnbundle)
@@ -13,11 +13,11 @@ This bundle aims to replace or add CDN domain to specific resource provided by w
 
 ### Get the bundle using composer
 
-Add EdgarEzCDNBundle by running this command from the terminal at the root of
+Add SmileEzCDNBundle by running this command from the terminal at the root of
 your eZPlatform project:
 
 ```bash
-composer require edgarez/cdnbundle
+composer require smile/ez-cdn-bundle
 ```
 
 
@@ -31,7 +31,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new EdgarEz\CDNBundle\EdgarEzCDNBundle(),
+        new Smile\EzCDNBundle\SmileEzCDNBundle(),
         // ...
     );
 }
@@ -45,7 +45,7 @@ Refer to : http://www.w3.org/TR/cors/
 
 ```yaml
 # ezpublish/config/config.yml
-edgar_ez_cdn:
+smile_ez_cdn:
     system:
         acme_group: #for each siteaccess
             domain: domain.tld #required, delare your CDN domain

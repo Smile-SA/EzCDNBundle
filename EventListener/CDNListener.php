@@ -1,6 +1,6 @@
 <?php
 
-namespace EdgarEz\CDNBundle\EventListener;
+namespace Smile\EzCDNBundle\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;

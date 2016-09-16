@@ -1,6 +1,6 @@
 <?php
 
-namespace EdgarEz\CDNBundle\DependencyInjection;
+namespace Smile\EzCDNBundle\DependencyInjection;
 
 use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\SiteAccessAware\ConfigurationProcessor;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -8,7 +8,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class EdgarEzCDNExtension extends Extension
+class SmileEzCDNExtension extends Extension
 {
     /**
      * {@inheritdoc}
