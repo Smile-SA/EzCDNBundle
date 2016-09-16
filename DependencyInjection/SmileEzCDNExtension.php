@@ -22,7 +22,7 @@ class SmileEzCDNExtension extends Extension
         $loader->load('default_settings.yml');
         $loader->load('services.yml');
 
-        $processor = new ConfigurationProcessor($container, 'edgar_ez_cdn');
+        $processor = new ConfigurationProcessor($container, 'smile_ez_cdn');
         $processor->mapSetting('domain', $config);
         $processor->mapSetting('extensions', $config);
     }
