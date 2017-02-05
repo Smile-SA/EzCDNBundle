@@ -2,7 +2,7 @@
   "name": "smile/ez-cdn-bundle",
   "type": "ezplatform-bundle",
   "description": "CDN post replace for EZPublish 5.x",
-  "license": ["MIT"],
+  "license": ["GPL-3.0"],
   "authors": [
     {
       "name": "Smile SA",
@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "~5.6|~7.0",
-    "ezsystems/ezplatform": "^1.7"
+    "ezsystems/ezpublish-kernel": "~6.7"
   },
   "autoload": {
     "psr-0": { "Smile\\EzCDNBundle": "" }
