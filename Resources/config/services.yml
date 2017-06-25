@@ -3,7 +3,7 @@ parameters:
 
 services:
     smile_ez_cdn.cdn_listener:
-        class: %smile_ez_cdn.cdn_listener_class%
+        class: "%smile_ez_cdn.cdn_listener_class%"
         tags:
             - { name: kernel.event_subscriber }
         calls:
